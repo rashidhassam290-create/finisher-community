@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070912">
+  <meta name="description" content="Finisher Community Official — Gaming, technology, cybersecurity learning, and community.">
+  <title>FINISHER COMMUNITY OFFICIAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="ambient ambient-pink"></div>
+  <div class="ambient ambient-blue"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Finisher Community home">
+      <span class="brand-mark">F<span>✦</span></span>
+      <span class="brand-name">FINISHER<span> COMMUNITY</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav">
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#features">DIVISIONS</a>
+      <a href="#join">JOIN US</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow"><span class="pulse-dot"></span> COMMUNITY • GAMING • TECHNOLOGY</div>
+      <h1 class="official-title">FINISHER <span>COMMUNITY</span><b>OFFICIAL</b></h1>
+      <div class="scan-line"></div>
+      <p class="hero-subtitle">ONE COMMUNITY. ONE EMPIRE.</p>
+      <p class="hero-copy">Gaming spirit. Digital creativity. A community built to learn, compete, and grow together.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#join">ENTER THE EMPIRE <span>↗</span></a>
+        <a class="button button-ghost" href="#about">DISCOVER FINISHER</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong class="counter" data-target="2019">0</strong><span>ESTABLISHED</span></div>
+        <div><strong>GAMING</strong><span>OUR ENERGY</span></div>
+        <div><strong>TECH</strong><span>OUR CURIOSITY</span></div>
+      </div>
+      <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-tag">// WHO WE ARE</div>
+      <div class="about-grid">
+        <div>
+          <h2>MORE THAN A<br><span>COMMUNITY.</span></h2>
+        </div>
+        <div class="about-copy">
+          <p>Welcome to <strong>Finisher Community Official</strong> — a space for gamers, creators, and tech enthusiasts. We bring people together through teamwork, competition, creativity, and responsible technology learning.</p>
+          <p class="quote">“Stay silent. Stay safe. Keep improving.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section divisions-section" id="features">
+      <div class="section-tag">// OUR DIVISIONS</div>
+      <h2 class="section-heading">BUILT FOR THE <span>NEXT LEVEL</span></h2>
+      <div class="cards">
+        <article class="feature-card pink-card">
+          <div class="card-icon">◈</div><div class="card-number">01 / PLAY</div>
+          <h3>GAMING ARENA</h3>
+          <p>Squad up, compete in matches, sharpen your skills, and celebrate fair play.</p>
+          <span class="card-line"></span>
+        </article>
+        <article class="feature-card blue-card">
+          <div class="card-icon">⌘</div><div class="card-number">02 / LEARN</div>
+          <h3>TECH & CYBER</h3>
+          <p>Explore programming and cybersecurity concepts through ethical, legal learning.</p>
+          <span class="card-line"></span>
+        </article>
+        <article class="feature-card purple-card">
+          <div class="card-icon">✧</div><div class="card-number">03 / CREATE</div>
+          <h3>CREATIVE LAB</h3>
+          <p>Build websites, make designs, share ideas, and turn projects into reality.</p>
+          <span class="card-line"></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="join-section" id="join">
+      <div class="join-grid"></div>
+      <div class="section-tag">// YOUR NEXT MOVE</div>
+      <h2>READY TO JOIN<br><span>THE EMPIRE?</span></h2>
+      <p>Meet the community. Bring your skills. Keep learning.</p>
+      <!-- Replace the # below with your real Discord or WhatsApp invite link. -->
+      <a class="button button-primary" href="#" id="join-button">JOIN FINISHER <span>↗</span></a>
+      <small id="join-note">Community invite link will be added here.</small>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="#home">FINISHER <span>COMMUNITY OFFICIAL</span></a>
+    <p>STAY SILENT • STAY SAFE</p>
+    <span class="copyright">© <span id="year"></span> FINISHER COMMUNITY. ALL RIGHTS RESERVED.</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
