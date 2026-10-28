@@ -9,6 +9,7 @@ let mode = 'login';
 function say(text, error=false){ message.textContent=text; message.classList.toggle('error', error); }
 function showMode(next){
   mode=next; const signup=mode==='signup';
+  $('signin-tab').classList.toggle('active',!signup); $('signup-tab').classList.toggle('active',signup);
   $('form-title').innerHTML=signup?'JOIN THE <span>EMPIRE</span>':'ENTER THE <span>EMPIRE</span>';
   $('form-subtitle').textContent=signup?'Create your member account to continue.':'Sign in to continue to Finisher Community.';
   $('name').hidden=!signup; $('name-label').hidden=!signup; $('name').required=signup;
@@ -19,6 +20,8 @@ function showMode(next){
   $('forgot-btn').hidden=signup; say('');
 }
 $('switch-btn').addEventListener('click',()=>showMode(mode==='login'?'signup':'login'));
+$('signin-tab').addEventListener('click',()=>showMode('login'));
+$('signup-tab').addEventListener('click',()=>showMode('signup'));
 function ensureAuthConfigured(){
   if(!firebaseConfig.apiKey || firebaseConfig.apiKey==='PASTE_API_KEY_HERE' || !firebaseConfig.appId || firebaseConfig.appId==='PASTE_APP_ID_HERE') throw new Error('Firebase config is not complete yet. Follow README.txt and fill firebase-config.js.');
   return getAuthInstance();
