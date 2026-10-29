@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FINISHER EMPIRE — Animated Logo</title>
+<style>
+:root{--cyan:#00d9ff;--pink:#ff20c8;--bg:#030611}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}
+body{display:grid;place-items:center;overflow:hidden}
+.stage{position:relative;width:min(100vw,1100px);min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 16px;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 30% 45%,#06234b 0,transparent 42%),radial-gradient(ellipse at 72% 50%,#36072f 0,transparent 44%),linear-gradient(140deg,#02040b,#080a1b 55%,#02030a)}
+.stage:before,.stage:after{content:"";position:absolute;width:48vw;height:48vw;max-width:580px;max-height:580px;border:2px solid var(--cyan);border-radius:50%;filter:drop-shadow(0 0 10px var(--cyan));opacity:.55;z-index:-1;animation:spin 12s linear infinite}
+.stage:after{border-color:var(--pink);filter:drop-shadow(0 0 10px var(--pink));width:42vw;height:42vw;animation:spin 9s linear infinite reverse;opacity:.5}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:scale(1);filter:drop-shadow(0 0 7px #00d9ff)}50%{transform:scale(1.035);filter:drop-shadow(0 0 22px #ff20c8)}}
+@keyframes flicker{0%,100%{opacity:1}48%{opacity:.84}50%{opacity:.96}52%{opacity:.75}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.emblem{width:min(52vw,360px);min-width:210px;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 0 12px #00cfff)}
+.skull{width:100%;height:auto;display:block}
+.title{margin-top:8px;text-align:center;font-weight:1000;line-height:.9;letter-spacing:.08em;font-size:clamp(2.4rem,8vw,6.2rem);font-style:italic;text-transform:uppercase;background:linear-gradient(90deg,#e9fbff 0%,var(--cyan) 30%,#fff 48%,var(--pink) 72%,#fff 100%);background-clip:text;-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 12px #081d54);animation:flicker 5s infinite}
+.empire{font-weight:800;letter-spacing:.45em;font-size:clamp(1rem,3vw,2rem);margin:12px 0 20px;text-align:center;color:#fff;text-shadow:0 0 8px var(--pink),0 0 18px var(--cyan)}
+.meta{font-size:clamp(.65rem,1.7vw,.9rem);letter-spacing:.24em;text-align:center;color:#cceeff}
+.tag{margin-top:18px;font-size:clamp(.75rem,2vw,1.1rem);font-style:italic;font-weight:800;letter-spacing:.12em;text-align:center;background:linear-gradient(90deg,var(--cyan),#fff,var(--pink));background-clip:text;-webkit-background-clip:text;color:transparent}
+.spark{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px 3px var(--cyan);animation:drift 5s ease-in-out infinite}
+.spark.p{background:var(--pink);box-shadow:0 0 12px 3px var(--pink);animation-delay:-2s}
+@keyframes drift{0%,100%{transform:translate(0,0);opacity:.3}50%{transform:translate(25px,-35px);opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body>
+<main class="stage" aria-label="Finisher Empire animated logo">
+<span class="spark" style="left:12%;top:24%"></span><span class="spark p" style="left:83%;top:20%"></span>
+<span class="spark p" style="left:18%;top:75%"></span><span class="spark" style="left:78%;top:78%"></span>
+<div class="emblem" aria-label="Crowned skull emblem">
+<svg class="skull" viewBox="0 0 400 390" role="img" aria-label="Stylized crowned skull with cyan and pink neon lighting">
+<defs>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7fbff"/><stop offset=".35" stop-color="#6e8aa8"/><stop offset=".65" stop-color="#18263e"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<linearGradient id="crown" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00d9ff"/><stop offset=".5" stop-color="#bcefff"/><stop offset="1" stop-color="#ff20c8"/></linearGradient>
+<linearGradient id="split" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00d9ff"/><stop offset=".49" stop-color="#2a5b85"/><stop offset=".51" stop-color="#6d245b"/><stop offset="1" stop-color="#ff20c8"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="200" cy="210" r="165" fill="none" stroke="url(#crown)" stroke-width="5" opacity=".9" filter="url(#glow)"/>
+<!-- crown -->
+<path d="M94 107 L75 34 L133 77 L163 13 L202 70 L240 13 L270 77 L326 34 L307 107 Z" fill="#071021" stroke="url(#crown)" stroke-width="8" stroke-linejoin="round" filter="url(#glow)"/>
+<path d="M96 99 Q200 124 305 99 L298 123 Q200 146 102 123 Z" fill="url(#crown)" stroke="#d9f8ff" stroke-width="3"/>
+<!-- skull silhouette -->
+<path d="M200 92 C124 92 83 145 91 211 C95 248 117 270 138 286 L140 323 Q140 342 160 342 L240 342 Q260 342 260 323 L262 286 C283 270 305 248 309 211 C317 145 276 92 200 92Z" fill="url(#metal)" stroke="url(#split)" stroke-width="8" filter="url(#glow)"/>
+<path d="M200 101 L200 283" stroke="#07101e" stroke-width="5" opacity=".7"/>
+<!-- eye sockets -->
+<path d="M112 191 Q144 145 179 188 L165 222 L129 230 Z" fill="#02040b" stroke="#00d9ff" stroke-width="5" filter="url(#glow)"/>
+<path d="M288 191 Q256 145 221 188 L235 222 L271 230 Z" fill="#02040b" stroke="#ff20c8" stroke-width="5" filter="url(#glow)"/>
+<path d="M123 197 L166 202" stroke="#00d9ff" stroke-width="4"/><path d="M277 197 L234 202" stroke="#ff20c8" stroke-width="4"/>
+<!-- nose -->
+<path d="M200 218 L181 249 L200 260 L219 249 Z" fill="#050813" stroke="#d9f8ff" stroke-width="3"/>
+<!-- cheek lines -->
+<path d="M111 235 L145 251 L174 248 M289 235 L255 251 L226 248" fill="none" stroke="#0a1830" stroke-width="7" stroke-linecap="round"/>
+<!-- teeth -->
+<path d="M151 276 Q200 291 249 276 L243 314 Q200 328 157 314 Z" fill="#080d1b" stroke="#eafaff" stroke-width="4"/>
+<path d="M171 280 L172 319 M190 284 L190 324 M210 284 L210 324 M229 280 L228 319" stroke="url(#split)" stroke-width="4"/>
+<!-- lower jaw lines -->
+<path d="M145 333 L255 333" stroke="url(#crown)" stroke-width="5" filter="url(#glow)"/>
+</svg>
+</div>
+<div class="title">FINISHER</div>
+<div class="empire">— EMPIRE —</div>
+<div class="meta">GAMING&nbsp; × &nbsp;CYBERSECURITY&nbsp; × &nbsp;COMMUNITY</div>
+<div class="tag">STAY SILENT, STAY SAFE</div>
+</main>
+</body>
+</html>
